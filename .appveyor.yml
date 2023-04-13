@@ -9,8 +9,9 @@ branches:
 cache: node_modules # кеширование
 
 install:
-  install:
+  # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node $env:nodejs_version
+  # install modules
   - npm install
 
 build: off # отключаем встроенную в appveyor систему сборки
